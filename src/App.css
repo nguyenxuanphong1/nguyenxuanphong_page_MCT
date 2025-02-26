@@ -162,6 +162,10 @@ html, body {
 
 }
 
+.text-home-tittle{
+  color: #0093f5;
+}
+
 .banner-text-title{
   font-weight: 700;
   font-size: 36px;
@@ -189,6 +193,55 @@ html, body {
   background-color: #0093f5;
   border: 1px solid #0093f5;
 }
+
+.body-wrapper{
+  margin: 40px 0px;
+}
+
+.body-tillte{
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44.46px;
+  letter-spacing: 0.25px;
+  color: #0093f5;
+}
+
+.body-text p{
+  margin: 50px;
+}
+
+.img-body img{
+  width: 520px;
+  height: 550px;
+}
+
+.action-contents1{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #EAF4FF ;
+  border-radius: 10px;
+}
+
+.body-content{
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.body-mct-text{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.content p i{
+  margin-right: 10px;
+}
+
 
 /* Responsive: Ẩn nút Đăng Nhập & Đăng Ký của Desktop trên mobile */
 @media (max-width: 768px) {
@@ -222,12 +275,21 @@ html, body {
     height: 35px;
   }
 
+  .img-body img{
+    width: 100%;
+  }
+
 }
 
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
   .banner_text{
     top: 15%;
     left: 4%;
+  }
+  .img-body img{
+    width: 420px;
+    height: 450px;
   }
 }
 
@@ -242,39 +304,44 @@ footer {
 }
 
 .footer-Information {
-  margin: 0 125px;
+  margin: 0 50px;
   padding-top: 113px;
   gap: 120px;
 }
 
-.footer-Information .footer-Information-right .logo {
+.footer-Information-right .logo {
   display: flex;
+  justify-content: center;
 }
 
-/* .footer-Information .footer-Information-right .logo .logo-content {
+.footer-Information-right .logo-content {
   margin-top: 21px;
   margin-left: 11px;
   font-weight: 700;
   font-size: 30px;
   color: #5e9ff9;
-} */
+}
 
-.footer-Information .footer-Information-right .footer-contact1 {
+.footer-contact p{
+  text-align: center;
+}
+
+.footer-contact1 {
   display: flex;
   gap: 1px;
 }
 
-.footer-Information .footer-Information-right .footer-contact1 i {
+.footer-contact1 i {
   width: 24px;
   height: 24px;
   color: #0093f5;
 }
 
-.footer-Information .footer-Information-right .footer-contact1 span {
+.footer-contact1 span {
   align-items: center;
 }
 
-.footer-Information .footer-Information-middle {
+.footer-Information-middle {
   display: flex;
   flex-direction: column;
   width: 170px;
@@ -285,19 +352,17 @@ footer {
   letter-spacing: 0.15px;
 }
 
-.footer-Information .footer-Information-middle a {
+.footer-Information-middle a {
   text-decoration: none;
   color: #212121;
 }
 
-.footer-Information .footer-Information-left {
+.footer-Information-left {
   display: flex;
   gap: 16px;
 }
 
-.footer-Information .footer-Information-left .icon-facebook,
-.footer-Information .footer-Information-left .icon-youtube,
-.footer-Information .footer-Information-left .icon-tiktok {
+.icon-facebook, .icon-youtube, .icon-tiktok {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -306,21 +371,19 @@ footer {
   align-items: center;
 }
 
-.footer-Information .footer-Information-left .icon-facebook {
+.icon-facebook {
   background-color: #1877f2;
 }
 
-.footer-Information .footer-Information-left .icon-youtube {
+.icon-youtube {
   background-color: #ff0000;
 }
 
-.footer-Information .footer-Information-left .icon-tiktok {
+.icon-tiktok {
   background-color: #000;
 }
 
-.footer-Information .footer-Information-left .icon-facebook i,
-.footer-Information .footer-Information-left .icon-youtube i,
-.footer-Information .footer-Information-left .icon-tiktok i {
+.icon-facebook i, .icon-youtube i, .icon-tiktok i {
   color: white;
   font-size: 24px;
 }
@@ -332,4 +395,9 @@ footer {
   line-height: 22.4px;
   letter-spacing: 0.15px;
   color: #212121;
+}
+
+/* Api */
+.api-text{
+  text-align: center;
 }

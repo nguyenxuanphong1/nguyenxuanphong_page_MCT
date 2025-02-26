@@ -2,18 +2,14 @@ import "../App.css";
 function Footer() {
   return (
     <footer>
+      <div className="container">
       <div className="row footer-Information">
-        <div className="col-4 footer-Information-right">
+        <div className="col-12 col-lg-3 col-xl-4 footer-Information-right">
           <div className="logo">
-            <div>
-              <img src="Logo.png" alt="Logo" width="63px" height="55px" />
-            </div>
-            {/* <div className="logo-content">
-              <span>MCT</span>
-            </div> */}
+              <img src="Logo.png" alt="Logo" width="192px" height="94px" />
           </div>
           <div className="footer-contact">
-            <span>Công ty TNHH Yotech Việt Nam</span>
+            <p>Công ty TNHH Yotech Việt Nam</p>
             <div className="footer-contact1">
               <div>
                 <i className="fas fa-map-marker-alt"></i>
@@ -40,7 +36,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="col-4 footer-Information-middle">
+        <div className="col-12 col-lg-3 col-xl-2 footer-Information-middle">
           <div>
             <a href="">Câu chuyện MCT</a>
           </div>
@@ -60,7 +56,7 @@ function Footer() {
             <a href="">Gửi phản hồi</a>
           </div>
         </div>
-        <div className="col-4 footer-Information-left">
+        <div className="col-12 col-lg-3 col-xl-3 footer-Information-left">
           <div className="icon-facebook">
             <i className="fab fa-facebook-f"></i>
           </div>
@@ -75,6 +71,8 @@ function Footer() {
       <div className="footer-copyright">
         <span>Copyright © 2023 www.mct.vn</span>
       </div>
+      </div>
+      
     </footer>
   );
 }
