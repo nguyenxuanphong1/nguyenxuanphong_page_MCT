@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nutito;
+}
+body {
+  overflow-x: hidden;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+/* Wrapper chứa Header để có thể định vị tuyệt đối icon menu */
+.header-wrapper {
+  position: relative;
+}
+
+/* Navigation cho Desktop */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: flex-end;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.nav ul li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  height: 4px;
+  background-color: #0093F5;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav ul li:hover {
+  color: #0093F5;
+}
+
+.nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+/* Nút Đăng Nhập & Đăng Ký (Desktop) */
+.header-lg {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-login,
+.btn-register {
+  width: 150px;
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-login {
+  border: 1px solid #0093F5;
+  background-color: #0093F5;
+  box-shadow: 0px 3px 0.5px 0.2px #017ED2;
+  color: #fff;
+}
+
+.btn-register {
+  border: 1px solid #A8AAAE;
+  background-color: #fff;
+  box-shadow: 0px 2px 0.5px 0.2px #A5A3AE99;
+  color: #A8AAAE;
+}
+
+.btn-login:hover {
+  background-color: #017ED2;
+  border-color: #017ED2;
+}
+
+.btn-register:hover {
+  background-color: #A8AAAE;
+  color: #fff;
+}
+
+/* Container Icon Menu (Mobile) */
+.menu-icon-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: block;
+  position: absolute;
+  top: 60px; /* Điều chỉnh theo chiều cao header của bạn */
+  left: 0;
+  max-width: 100%;
+  background: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  padding: 12px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.mobile-menu ul li:hover {
+  background: #e9ecef;
+}
+/* body */
+.banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner{
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner_text{
+  padding: 20px;
+  position: absolute;
+  width: 500px !important;
+  left: 8%;
+  top: 30%;
+  transform: translateY(-50);
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.banner-text-title{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44.46px;
+  letter-spacing: 0.25px;
+  color: #0093f5;
+}
+
+.banner-text-content{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32.74px;
+  letter-spacing: 0%;
+}
+
+.banner_text button{
+  font-size: 18px;
+  width: 199px;
+  height: 44px;
+  border-radius: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 0px 3px 0.5px 0.2px #017ed2;
+  color: white;
+  background-color: #0093f5;
+  border: 1px solid #0093f5;
+}
+
+/* Responsive: Ẩn nút Đăng Nhập & Đăng Ký của Desktop trên mobile */
+@media (max-width: 768px) {
+  .header-lg {
+    display: none;
+  }
+  .banner_text{
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+  }
+  .banner{
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+  }
+
+  .banner-text-title{
+    font-size: 30px;
+  }
+
+  .banner-text-content{
+    font-size: 20px;
+  }
+
+  .banner_text button{
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner_text{
+    top: 15%;
+    left: 4%;
+  }
+}
+
+
+
+/*footer */
+footer {
+  background-color: #eaf4ff;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.footer-Information {
+  margin: 0 125px;
+  padding-top: 113px;
+  gap: 120px;
+}
+
+.footer-Information .footer-Information-right .logo {
+  display: flex;
+}
+
+/* .footer-Information .footer-Information-right .logo .logo-content {
+  margin-top: 21px;
+  margin-left: 11px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #5e9ff9;
+} */
+
+.footer-Information .footer-Information-right .footer-contact1 {
+  display: flex;
+  gap: 1px;
+}
+
+.footer-Information .footer-Information-right .footer-contact1 i {
+  width: 24px;
+  height: 24px;
+  color: #0093f5;
+}
+
+.footer-Information .footer-Information-right .footer-contact1 span {
+  align-items: center;
+}
+
+.footer-Information .footer-Information-middle {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: 0.15px;
+}
+
+.footer-Information .footer-Information-middle a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.footer-Information .footer-Information-left {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-Information .footer-Information-left .icon-facebook,
+.footer-Information .footer-Information-left .icon-youtube,
+.footer-Information .footer-Information-left .icon-tiktok {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-Information .footer-Information-left .icon-facebook {
+  background-color: #1877f2;
+}
+
+.footer-Information .footer-Information-left .icon-youtube {
+  background-color: #ff0000;
+}
+
+.footer-Information .footer-Information-left .icon-tiktok {
+  background-color: #000;
+}
+
+.footer-Information .footer-Information-left .icon-facebook i,
+.footer-Information .footer-Information-left .icon-youtube i,
+.footer-Information .footer-Information-left .icon-tiktok i {
+  color: white;
+  font-size: 24px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: 0.15px;
+  color: #212121;
+}
